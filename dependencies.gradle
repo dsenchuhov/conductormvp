@@ -1,0 +1,28 @@
+ext {
+
+    app = [
+            versionName: '1.0.0',
+            versionCode: 1,
+    ]
+
+    android = [
+            applicationId: 'com.dan41k.conductorsample',
+            buildTools   : '26.0.0',
+            compileSdk   : 26,
+            minSdk       : 16,
+            targetSdk    : 26
+    ]
+
+    version = [
+            kotlin   : '1.1.51',
+
+            appcompat: '26.1.0',
+
+            conductor: '2.1.4',
+            nucleus  : '4.0.0',
+            dagger   : '2.11',
+
+            junit    : '4.12',
+            espresso : '3.0.1',
+    ]
+}
