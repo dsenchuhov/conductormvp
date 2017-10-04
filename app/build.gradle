@@ -36,6 +36,8 @@ dependencies {
     def version = rootProject.extensions.ext.version
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$version.kotlin"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$version.kotlin"
+
     implementation "com.android.support:appcompat-v7:$version.appcompat"
 
     implementation "com.bluelinelabs:conductor:$version.conductor"

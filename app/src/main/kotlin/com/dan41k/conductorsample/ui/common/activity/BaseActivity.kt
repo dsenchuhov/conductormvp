@@ -7,6 +7,7 @@ import com.bluelinelabs.conductor.Router
 import com.dan41k.conductorsample.di.Injector
 import com.dan41k.conductorsample.di.component.ActivityComponent
 import com.dan41k.conductorsample.di.module.ActivityModule
+import com.dan41k.conductorsample.ui.common.annotation.Layout
 import javax.inject.Inject
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -32,7 +33,10 @@ abstract class BaseActivity : AppCompatActivity() {
 
     fun component() = component
 
-    abstract fun layout(): Int
-
     abstract fun container(): ViewGroup
+
+    private fun layout(): Int {
+        this.javaClass.kotlin.annotations.forEach { if (it is Layout) return it.layoutRes }
+        throw IllegalArgumentException("You should specify Layout annotation")
+    }
 }
