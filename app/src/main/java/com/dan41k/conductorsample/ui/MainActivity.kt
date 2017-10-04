@@ -1,8 +1,10 @@
-package com.dan41k.conductorsample
+package com.dan41k.conductorsample.ui
 
 import android.os.Bundle
 import android.util.Log
 import android.view.ViewGroup
+import com.dan41k.conductorsample.R
+import com.dan41k.conductorsample.ui.common.activity.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {

@@ -2,7 +2,7 @@ package com.dan41k.conductorsample.di.component
 
 import android.content.Context
 import com.dan41k.conductorsample.App
-import com.dan41k.conductorsample.di.annotation.ApplicationContext
+import com.dan41k.conductorsample.di.scopes.ApplicationContext
 import com.dan41k.conductorsample.di.module.ActivityModule
 import com.dan41k.conductorsample.di.module.ApplicationModule
 import dagger.Component

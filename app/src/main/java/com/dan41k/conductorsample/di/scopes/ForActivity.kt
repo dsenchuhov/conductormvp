@@ -1,4 +1,4 @@
-package com.dan41k.conductorsample.di.annotation
+package com.dan41k.conductorsample.di.scopes
 
 import javax.inject.Scope
 

@@ -4,7 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.view.ViewGroup
 import com.bluelinelabs.conductor.Conductor
-import com.dan41k.conductorsample.di.annotation.ForActivity
+import com.dan41k.conductorsample.di.scopes.ForActivity
 import dagger.Module
 import dagger.Provides
 

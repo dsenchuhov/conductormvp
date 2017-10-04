@@ -1,4 +1,4 @@
-package com.dan41k.conductorsample.di.annotation
+package com.dan41k.conductorsample.di.scopes
 
 @Target(AnnotationTarget.TYPE,
         AnnotationTarget.FIELD,

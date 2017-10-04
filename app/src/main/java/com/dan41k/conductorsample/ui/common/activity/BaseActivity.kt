@@ -1,4 +1,4 @@
-package com.dan41k.conductorsample
+package com.dan41k.conductorsample.ui.common.activity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
