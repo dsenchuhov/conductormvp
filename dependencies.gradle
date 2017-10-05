@@ -23,6 +23,8 @@ ext {
             nucleus  : '4.0.0',
             dagger   : '2.11',
 
+            celladapter: '2.0.4',
+
             junit    : '4.12',
             espresso : '3.0.1',
     ]

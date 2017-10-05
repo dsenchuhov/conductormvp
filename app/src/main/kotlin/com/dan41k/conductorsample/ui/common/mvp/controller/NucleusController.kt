@@ -27,7 +27,7 @@ abstract class NucleusController<P : Presenter<out Any>> : Controller, ViewWithP
         )
     }
 
-    constructor() : super(null)
+    constructor() : this(null)
 
     constructor(bundle: Bundle?) : super(bundle)
 
@@ -49,7 +49,7 @@ abstract class NucleusController<P : Presenter<out Any>> : Controller, ViewWithP
     }
 
     @CallSuper
-    fun onViewCreated(view: View) {
+    open fun onViewCreated(view: View) {
         // here presenter will be created
         presenterDelegate.onResume(this)
     }
