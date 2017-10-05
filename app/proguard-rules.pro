@@ -14,7 +14,23 @@
 -keepclassmembers class **$WhenMappings { <fields>; }
 -keep class kotlin.Metadata { *; }
 
+
+
+
+
+# Base Android exclusions, required for proper function of various components
 -keep public class * extends android.app.Activity { *; }
+-keep public class * extends android.app.Application { *; }
+-keep public class * extends android.app.Service { *; }
+-keep public class * extends android.content.BroadcastReceiver { *; }
+-keep public class * extends android.content.ContentProvider { *; }
+-keep public class * extends android.preference.Preference { *; }
+-keep public class * extends android.support.v4.app.Fragment { *; }
+-keep public class * extends android.app.Fragment { *; }
+
+
+-keep class android.support.v7.app.** { *; }
+
 
 #ok
 -keep class **.R
