@@ -15,13 +15,14 @@ ext {
 
     version = [
             kotlin   : '1.1.51',
-            gradl   : '3.0.0-beta6',
-
-            appcompat: '26.1.0',
+            gradle   : '3.0.0-beta6',
 
             conductor: '2.1.4',
             nucleus  : '4.0.0',
             dagger   : '2.11',
+
+            appcompat: '26.1.0',
+            timber: '4.5.1',
 
             celladapter: '2.0.4',
 

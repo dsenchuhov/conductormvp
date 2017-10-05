@@ -7,7 +7,7 @@ buildscript {
         apply from: 'dependencies.gradle'
         def version = rootProject.extensions.ext.version
 
-        classpath "com.android.tools.build:gradle:$version.gradl"
+        classpath "com.android.tools.build:gradle:$version.gradle"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$version.kotlin"
     }
 }
