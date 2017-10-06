@@ -4,5 +4,4 @@ package com.dan41k.conductorsample.di.scopes
         AnnotationTarget.FIELD,
         AnnotationTarget.FUNCTION,
         AnnotationTarget.VALUE_PARAMETER)
-@Retention(AnnotationRetention.SOURCE)
-annotation class ApplicationContext
+@Retention(AnnotationRetention.SOURCE) annotation class ApplicationContext
