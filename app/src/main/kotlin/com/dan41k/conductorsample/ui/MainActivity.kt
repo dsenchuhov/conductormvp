@@ -6,7 +6,7 @@ import com.bluelinelabs.conductor.RouterTransaction
 import com.dan41k.conductorsample.R
 import com.dan41k.conductorsample.ui.common.activity.BaseActivity
 import com.dan41k.conductorsample.ui.common.annotation.Layout
-import com.dan41k.conductorsample.ui.masterDetail.MainController
+import com.dan41k.conductorsample.ui.main.MainController
 import kotlinx.android.synthetic.main.activity_main.*
 
 @Layout(R.layout.activity_main)

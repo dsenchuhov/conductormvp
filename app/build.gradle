@@ -28,21 +28,12 @@ android {
         debug {
             applicationIdSuffix ".debug"
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
         }
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    packagingOptions {
-        exclude "/META-INF/*.kotlin_module"
-        exclude "**/kotlin/**"
-        exclude "**/*.txt"
-        exclude "**/*.xml"
-        exclude "**/*.properties"
     }
 }
 
