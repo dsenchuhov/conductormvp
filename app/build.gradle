@@ -36,6 +36,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude "/META-INF/*.kotlin_module"
+        exclude "**/kotlin/**"
+        exclude "**/*.txt"
+        exclude "**/*.xml"
+        exclude "**/*.properties"
+    }
 }
 
 dependencies {
@@ -45,19 +53,17 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$version.kotlin"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$version.kotlin"
 
-    implementation "com.android.support:appcompat-v7:$version.appcompat"
-
     implementation "com.bluelinelabs:conductor:$version.conductor"
     implementation "info.android15.nucleus:nucleus:$version.nucleus"
-
-    implementation "com.github.erva.CellAdapter:celladapter-kotlin:$version.celladapter"
 
     kapt "com.google.dagger:dagger-compiler:$version.dagger"
     implementation "com.google.dagger:dagger:$version.dagger"
 
-    implementation "com.android.support:appcompat-v7:$version.appcompat"
-    implementation "com.android.support:recyclerview-v7:$version.appcompat"
     implementation "com.jakewharton.timber:timber:$version.timber"
+
+    implementation "com.android.support:appcompat-v7:$version.support_v7"
+    implementation "com.android.support:recyclerview-v7:$version.support_v7"
+    implementation "com.github.erva.celladapter:celladapter-kotlin:$version.celladapter"
 
     testImplementation "junit:junit:$version.junit"
     androidTestImplementation ("com.android.support.test.espresso:espresso-core:$version.espresso", {

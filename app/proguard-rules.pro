@@ -44,7 +44,7 @@
 -keep class com.dan41k.conductorsample.di.** { *; }
 
 # Support v7
--keep class android.support.v7.app.** { *; }
+-keep class android.support.v7.** { *; }
 
 #CellAdapter
 -keepclasseswithmembers public class * extends io.erva.celladapter.** { *; }
