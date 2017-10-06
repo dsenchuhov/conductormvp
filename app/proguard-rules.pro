@@ -9,6 +9,7 @@
 -keep public class * extends android.preference.Preference { *; }
 -keep public class * extends android.support.v4.app.Fragment { *; }
 -keep public class * extends android.app.Fragment { *; }
+-keep public class * extends nucleus.presenter.Presenter { *; }
 
 # Kotlin
 -dontwarn rx.internal.util.unsafe.**
@@ -44,3 +45,9 @@
 
 # Support v7
 -keep class android.support.v7.app.** { *; }
+
+#CellAdapter
+-keepclasseswithmembers public class * extends io.erva.celladapter.** { *; }
+-keepclassmembers class * extends io.erva.celladapter.Cell {
+    <init>(android.view.View);
+}
