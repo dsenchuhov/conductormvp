@@ -6,8 +6,8 @@ ext {
     ]
 
     android = [
-            applicationId: 'com.dan41k.conductorsample',
-            buildTools   : '26.0.0',
+            applicationId: 'template',
+            buildTools   : '26.0.2',
             compileSdk   : 26,
             minSdk       : 16,
             targetSdk    : 26

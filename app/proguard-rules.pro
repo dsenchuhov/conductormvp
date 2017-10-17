@@ -41,7 +41,7 @@
 }
 
 # Dependency injection
--keep class com.dan41k.conductorsample.di.** { *; }
+-keep class template.di.** { *; }
 
 # Support v7
 -keep class android.support.v7.** { *; }
