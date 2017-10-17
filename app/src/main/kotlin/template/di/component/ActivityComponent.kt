@@ -8,7 +8,8 @@ import template.di.module.ControllerModule
 import template.di.scopes.ForActivity
 import template.ui.MainActivity
 
-@ForActivity @Subcomponent(modules = arrayOf(ActivityModule::class))
+@ForActivity
+@Subcomponent(modules = arrayOf(ActivityModule::class))
 interface ActivityComponent {
 
     fun plus(controllerModule: ControllerModule): ControllerComponent

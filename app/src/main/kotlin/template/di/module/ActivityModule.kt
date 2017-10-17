@@ -8,9 +8,14 @@ import dagger.Module
 import dagger.Provides
 import template.di.scopes.ForActivity
 
-@Module class ActivityModule(private val activity: Activity, private val container: ViewGroup, private val bundle: Bundle?) {
+@Module
+class ActivityModule(private val activity: Activity, private val container: ViewGroup, private val bundle: Bundle?) {
 
-    @Provides @ForActivity fun provideActivityInstance() = activity
+    @Provides
+    @ForActivity
+    fun provideActivityInstance() = activity
 
-    @Provides @ForActivity fun provideRouter() = Conductor.attachRouter(activity, container, bundle)
+    @Provides
+    @ForActivity
+    fun provideRouter() = Conductor.attachRouter(activity, container, bundle)
 }

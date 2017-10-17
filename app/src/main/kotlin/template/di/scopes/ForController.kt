@@ -7,4 +7,5 @@ import javax.inject.Scope
         AnnotationTarget.FIELD,
         AnnotationTarget.FUNCTION,
         AnnotationTarget.VALUE_PARAMETER)
-@Retention(AnnotationRetention.SOURCE) @Scope annotation class ForController
+@Retention(AnnotationRetention.SOURCE)
+@Scope annotation class ForController

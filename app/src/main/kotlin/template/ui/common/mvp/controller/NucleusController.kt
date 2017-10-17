@@ -6,18 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bluelinelabs.conductor.Controller
-import nucleus.factory.PresenterFactory
-import nucleus.factory.ReflectionPresenterFactory
-import nucleus.presenter.Presenter
-import nucleus.view.PresenterLifecycleDelegate
-import nucleus.view.ViewWithPresenter
+import nucleus5.factory.PresenterFactory
+import nucleus5.factory.ReflectionPresenterFactory
+import nucleus5.presenter.RxPresenter
+import nucleus5.view.PresenterLifecycleDelegate
+import nucleus5.view.ViewWithPresenter
 import template.di.component.ControllerComponent
 import template.di.module.ControllerModule
 import template.ui.common.activity.BaseActivity
 import template.ui.common.annotation.Layout
 import template.ui.common.mvp.DaggerPresenterFactory
 
-abstract class NucleusController<P : Presenter<out Any>> : Controller, ViewWithPresenter<P> {
+abstract class NucleusController<P : RxPresenter<out Any>> : Controller, ViewWithPresenter<P> {
 
     private val presenterDelegate by lazy {
         PresenterLifecycleDelegate<P>(

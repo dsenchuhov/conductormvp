@@ -14,19 +14,20 @@ ext {
     ]
 
     version = [
-            kotlin   : '1.1.51',
-            gradle   : '3.0.0-beta6',
-
-            conductor: '2.1.4',
-            nucleus  : '4.0.0',
-            dagger   : '2.11',
-
-            timber: '4.5.1',
-            support_v7: '26.1.0',
-
+            kotlin     : '1.1.51',
+            gradle     : '3.0.0-beta6',
+            conductor  : '2.1.4',
+            nucleus    : '5.0.0-beta1',
+            rxjava     : '2.1.5',
+            rxandroid     : '2.0.1',
+            dagger     : '2.11',
+            okhttp     : '3.9.0',
+            okhttp_log : '3.8.1',
+            retrofit2  : '2.3.0',
+            timber     : '4.5.1',
+            support_v7 : '26.1.0',
             celladapter: '2.0.4',
-
-            junit    : '4.12',
-            espresso : '3.0.1',
+            junit      : '4.12',
+            espresso   : '3.0.1',
     ]
 }

@@ -25,13 +25,18 @@ android {
     }
 
     buildTypes {
+        all{
+
+        }
         debug {
             applicationIdSuffix ".debug"
+            buildConfigField "String", "END_POINT", '"https://api.coindesk.com/v1/bpi/"'
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         release {
             minifyEnabled true
             shrinkResources true
+            buildConfigField "String", "END_POINT", '"https://api.coindesk.com/v1/bpi/"'
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -45,10 +50,20 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$version.kotlin"
 
     implementation "com.bluelinelabs:conductor:$version.conductor"
-    implementation "info.android15.nucleus:nucleus:$version.nucleus"
+    implementation "info.android15.nucleus5:nucleus:$version.nucleus"
 
     kapt "com.google.dagger:dagger-compiler:$version.dagger"
     implementation "com.google.dagger:dagger:$version.dagger"
+    implementation "com.google.code.gson:gson:2.8.0"
+
+    implementation "com.squareup.okhttp3:okhttp:$version.okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$version.okhttp_log"
+    implementation "com.squareup.retrofit2:retrofit:$version.retrofit2"
+    implementation "com.squareup.retrofit2:converter-gson:$version.retrofit2"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$version.retrofit2"
+
+    implementation "io.reactivex.rxjava2:rxjava:$version.rxjava"
+    implementation "io.reactivex.rxjava2:rxandroid:$version.rxandroid"
 
     implementation "com.jakewharton.timber:timber:$version.timber"
 

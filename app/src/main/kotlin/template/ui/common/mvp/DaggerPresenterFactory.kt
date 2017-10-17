@@ -1,11 +1,11 @@
 package template.ui.common.mvp
 
-import nucleus.factory.PresenterFactory
-import nucleus.presenter.Presenter
+import nucleus5.factory.PresenterFactory
+import nucleus5.presenter.RxPresenter
 import template.di.Injector
 import timber.log.Timber
 
-class DaggerPresenterFactory<P : Presenter<out Any>,
+class DaggerPresenterFactory<P : RxPresenter<out Any>,
         out PF : PresenterFactory<P>>(private val presenterFactory: PF,
                                       component: Any) : PresenterFactory<P> {
 

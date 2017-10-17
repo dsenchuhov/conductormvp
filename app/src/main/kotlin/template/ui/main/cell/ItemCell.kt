@@ -9,7 +9,7 @@ import template.R
 import template.ui.main.model.Item
 
 @Layout(R.layout.cell_main)
-class ItemCell(view: View): SelectableCell<Item, Cell.Listener<Item>>(view) {
+class ItemCell(view: View) : SelectableCell<Item, Cell.Listener<Item>>(view) {
 
     override fun bindView() {
         view.title.text = item().title
