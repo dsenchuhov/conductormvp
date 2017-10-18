@@ -25,9 +25,6 @@ android {
     }
 
     buildTypes {
-        all{
-
-        }
         debug {
             applicationIdSuffix ".debug"
             buildConfigField "String", "END_POINT", '"https://api.coindesk.com/v1/bpi/"'
@@ -54,7 +51,7 @@ dependencies {
 
     kapt "com.google.dagger:dagger-compiler:$version.dagger"
     implementation "com.google.dagger:dagger:$version.dagger"
-    implementation "com.google.code.gson:gson:2.8.0"
+    implementation "com.google.code.gson:gson:$version.gson"
 
     implementation "com.squareup.okhttp3:okhttp:$version.okhttp"
     implementation "com.squareup.okhttp3:logging-interceptor:$version.okhttp_log"
@@ -72,7 +69,7 @@ dependencies {
     implementation "com.github.erva.celladapter:celladapter-kotlin:$version.celladapter"
 
     testImplementation "junit:junit:$version.junit"
-    androidTestImplementation ("com.android.support.test.espresso:espresso-core:$version.espresso", {
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:$version.espresso", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 }

@@ -4,30 +4,30 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import nucleus5.presenter.RxPresenter
 import template.api.Api
-import template.api.model.Price
+import template.ui.main.cell.MainModel
 import javax.inject.Inject
 
 class MainPresenter : RxPresenter<MainPresenter.View>() {
 
     @Inject lateinit var api: Api
 
-    override fun onTakeView(view: View?) {
-        super.onTakeView(view)
-    }
-
-    fun getCurrency() {
-        api.getCurrentPrice("UAH")
+    fun fetchHistory() {
+        add(api.getHistoricalPrice()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
-                        { currencyPrice -> view?.onCurrency(currencyPrice) },
+                        { historical ->
+                            view?.onHistoricalLoaded(
+                                    historical.bpi.toList().asReversed()
+                                            .map { MainModel(it.first, it.second) })
+                        },
                         { _ -> view?.onError() }
-                )
+                ))
     }
 
     interface View {
 
-        fun onCurrency(currencyPrice: Price)
+        fun onHistoricalLoaded(historical: List<MainModel>)
 
         fun onError()
     }

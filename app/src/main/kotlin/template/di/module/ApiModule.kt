@@ -1,6 +1,5 @@
 package template.di.module
 
-import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -15,6 +14,7 @@ import template.BuildConfig
 import template.api.Api
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
+
 
 @Module
 class ApiModule() {
@@ -39,7 +39,6 @@ class ApiModule() {
     @Singleton
     internal fun provideGson(): Gson {
         return GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
                 .create()
     }
 

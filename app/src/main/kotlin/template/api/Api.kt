@@ -3,6 +3,7 @@ package template.api
 import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Path
+import template.api.model.Historical
 import template.api.model.Price
 
 /**
@@ -16,4 +17,7 @@ interface Api {
 
     @GET("currentprice/{code}.json")
     fun getCurrentPrice(@Path("code") code: String): Flowable<Price>
+
+    @GET("historical/close.json")
+    fun getHistoricalPrice(): Flowable<Historical>
 }
