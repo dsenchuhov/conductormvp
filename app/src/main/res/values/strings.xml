@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Template</string>
+    <string name="license">Powered by https://www.coindesk.com/</string>
 </resources>

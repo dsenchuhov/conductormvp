@@ -21,7 +21,7 @@ class MainPresenter : RxPresenter<MainPresenter.View>() {
                                     historical.bpi.toList().asReversed()
                                             .map { MainModel(it.first, it.second) })
                         },
-                        { _ -> view?.onError() }
+                        { throwable -> view?.onError(throwable) }
                 ))
     }
 
@@ -29,6 +29,6 @@ class MainPresenter : RxPresenter<MainPresenter.View>() {
 
         fun onHistoricalLoaded(historical: List<MainModel>)
 
-        fun onError()
+        fun onError(throwable: Throwable)
     }
 }

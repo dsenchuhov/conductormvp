@@ -7,5 +7,5 @@
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
     android:padding="16dp"
-    android:textSize="24sp"
+    android:textSize="20sp"
     tools:text="text"/>
